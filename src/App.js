@@ -11,11 +11,11 @@ function App() {
     <div className="App">
       <ConnectedRouter history={history}>
         <Switch>
-          <Route path="/" exact component={Main} />
+          <Route path="/" component={Main} />
           <Route path="/login" exact component={Login} />
           <Route path="/signup" exact component={SignUp} />
-          <Route path="/channel/:id" exact component={Channel} />
-          <Route path="/dm/:id" exact component={MessagePage} />
+          {/* <Route path="/channel/:id" component={Channel} />
+          <Route path="/dm" component={MessagePage} /> */}
         </Switch>
       </ConnectedRouter>
     </div>
