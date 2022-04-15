@@ -5,31 +5,29 @@ import { Button } from "../../elements";
 const ChannelMsgBox = ({ chat, onChangeChat, placeholder, onSubmitForm }) => {
   return (
     <>
-      <ChannelMsgBoxWrap>
-        <InputBox>
-          <InputText
-            onChange={onChangeChat}
-            value={chat}
-            placeholder={placeholder || `# 에게 메시지 보내기`}
-          ></InputText>
-          <IconBox>
-            <IoSend style={{ color: "#b7b7b7" }} />
-          </IconBox>
-        </InputBox>
-      </ChannelMsgBoxWrap>
+      <InputBox>
+        <InputText
+          onChange={onChangeChat}
+          value={chat}
+          placeholder={placeholder || `# 에게 메시지 보내기`}
+        ></InputText>
+
+        <IconBox>
+          <IoSend style={{ color: "#b7b7b7" }} />
+        </IconBox>
+      </InputBox>
     </>
   );
 };
-const ChannelMsgBoxWrap = styled.div`
-  width: 100%;
-`;
+
 const InputBox = styled.div`
   border: 1px solid rgba(var(--sk_foreground_high_solid, 134, 134, 134), 1);
   border-radius: 4px;
-  height: 79px;
-  display: grid;
+  // height: 79px;
+  // display: grid;
   margin: 0 10px 0 10px;
-  grid-template-rows: 35px 44px;
+  padding: 15px;
+  // grid-template-rows: 35px 44px;
 `;
 const InputText = styled.input`
   margin: 0 auto;
@@ -38,8 +36,8 @@ const InputText = styled.input`
 `;
 
 const IconBox = styled.div`
-  display: grid;
-  grid-template-columns: 15% 35% 50%;
+  margin: 40px 10px 0px 0px;
+  float: right;
 `;
 const IconBoxItem = styled.div`
   margin: 6px 6px;

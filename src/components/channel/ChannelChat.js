@@ -5,7 +5,7 @@ import { Image } from "../../elements";
 
 const ChannelChat = () => {
   return (
-    <React.Fragment>
+    <>
       <ChatListWrap>
         <ChatListBox>
           <ChatListBoxInfo>
@@ -20,18 +20,18 @@ const ChannelChat = () => {
           </ChatListBoxInfo>
         </ChatListBox>
       </ChatListWrap>
-    </React.Fragment>
+    </>
   );
 };
 
 const ChatListWrap = styled.div`
   height: 75vh;
-  padding: 8px 10px;
-  flex-direction: rows;
+  //   padding: 8px 10px;
+  //   flex-direction: rows;
   overflow-y: scroll;
 `;
 const ChatListBox = styled.div`
-  margin-bottom: 16px;
+  //   margin-bottom: 16px;
 `;
 const ChatListBoxInfo = styled.div`
   display: flex;

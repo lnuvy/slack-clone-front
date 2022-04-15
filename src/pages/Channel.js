@@ -19,7 +19,7 @@ const Channel = () => {
 
 const ChannelsWrap = styled.div`
   width: 100%;
-  height: calc(100vh - 38px);
+  // height: 100vh;
   display: flex;
   flex-direction: column;
 `;
