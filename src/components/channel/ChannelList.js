@@ -16,7 +16,7 @@ const ChannelList = () => {
             history.replace("/main/channel");
           }}
         >
-          <span style={{ margin: "4px" }}># 홍길동</span>
+          <span style={{ margin: "4px" }}># 홍길동ㅁㄴㅇㄹㅁ</span>
         </UserWarp>
       </ListWrap>
     </>
