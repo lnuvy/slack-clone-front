@@ -1,24 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import { history } from "../redux/configureStore";
+import { history } from "../../redux/configureStore";
 
-import { Image } from "../elements/index";
+import { Image } from "../../elements/index";
 
-const ChannelList = () => {
+const MassageList = () => {
   return (
     <>
       <ListWrap>
         <GridMenu>
           {/* <button></button> */}
-          <span>채널</span>
+          <span>다이렉트 메시지</span>
         </GridMenu>
-
         <UserWarp
           onClick={() => {
-            history.push("/main/channel");
+            history.replace("/main/dm");
           }}
         >
-          <span style={{ margin: "4px" }}># 홍길동</span>
+          <Image shape="ProfileImg" size="20" />
+          <span style={{ margin: "4px" }}>홍길동</span>
         </UserWarp>
       </ListWrap>
     </>
@@ -37,6 +37,7 @@ const ChannelList = () => {
 //   margin-left: 10px;
 //   cursor: pointer;
 // `;
+
 const ListWrap = styled.div`
   margin: 15px 5px;
 `;
@@ -59,4 +60,4 @@ const UserWarp = styled.div`
   width: 100%;
 `;
 
-export default ChannelList;
+export default MassageList;

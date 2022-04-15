@@ -14,7 +14,7 @@ const Button = (props) => {
 const DefaultBtn = styled.button`
   cursor: pointer;
   font-size: 18px;
-  min-width: 96px;
+  // min-width: 96px;
   border-radius: 4px;
   &:hover {
     box-shadow: 0 1px 4px rgb(0 0 0 / 30%);

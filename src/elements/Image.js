@@ -42,6 +42,7 @@ const ProfileImg = styled.div`
   background-image: url("${(props) => props.src}");
   background-size: cover;
   margin: 4px;
+  cursor: pointer;
 `;
 
 export default Image;
