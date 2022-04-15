@@ -4,10 +4,12 @@ import { Switch } from "react-router-dom";
 import styled from "styled-components";
 
 import NavigationBar from "../components/NavigationBar";
-import ChannelList from "../components/ChannelList";
-import MassageList from "../components/MassageList";
+import ChannelList from "../components/channel/ChannelList";
+// import ChannelList from "../components/channel/ChannelList";
+import MassageList from "../components/massage/MassageList";
 import Channel from "./Channel";
 import MessagePage from "./MessagePage";
+import { BrowserRouter } from "react-router-dom";
 
 // 처음 로그인 했을때, 주된 컨텐츠가 되는 부분 (슬랙에서 Slack Connect 부분)
 const Main = () => {
@@ -24,8 +26,8 @@ const Main = () => {
         </ChannelsWrap>
         <ChatsWrap>
           <Switch>
-            <Route path="/channel" component={Channel} />
-            <Route path="/dm" component={MessagePage} />
+            <Route path="/main/channel" exact component={Channel} />
+            <Route path="/main/dm" exact component={MessagePage} />
           </Switch>
         </ChatsWrap>
       </MainWrap>
@@ -35,7 +37,7 @@ const Main = () => {
 
 const MainWrap = styled.div`
   display: flex;
-  flex: 1;
+  // flex: 1;
 `;
 
 const ChannelsWrap = styled.nav`
@@ -50,15 +52,14 @@ const ChannelsWrap = styled.nav`
 const Title = styled.button`
   width: 100%;
   height: 49px;
-  line-height: 49px;
   text-align: left;
   border: none;
   border-top: 1px solid rgb(82, 38, 83);
   border-bottom: 1px solid rgb(82, 38, 83);
-  font-weight: 900;
+  font-weight: 500;
   font-size: 18px;
   background: transparent;
-  text-overflow: ellipsis;
+  // text-overflow: ellipsis;
   overflow: hidden;
   padding: 0 54px 0 16px;
   margin: 0;

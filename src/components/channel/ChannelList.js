@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { history } from "../redux/configureStore";
-
-import { Image } from "../elements/index";
+import { history } from "../../redux/configureStore";
 
 const ChannelList = () => {
   return (
@@ -15,7 +13,7 @@ const ChannelList = () => {
 
         <UserWarp
           onClick={() => {
-            history.replace("/channel");
+            history.replace("/main/channel");
           }}
         >
           <span style={{ margin: "4px" }}># 홍길동</span>
@@ -25,18 +23,6 @@ const ChannelList = () => {
   );
 };
 
-// export const CollapseButton = styled.button`
-//   background: transparent;
-//   border: none;
-//   width: 28px;
-//   height: 28px;
-//   display: inline-flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: white;
-//   margin-left: 10px;
-//   cursor: pointer;
-// `;
 const ListWrap = styled.div`
   margin: 15px 5px;
 `;

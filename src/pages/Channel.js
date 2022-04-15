@@ -1,11 +1,27 @@
 import React from "react";
+import styled from "styled-components";
+
+import ChannelHeader from "../components/channel/ChannelHeader";
+import ChannelMsgBox from "../components/channel/ChannelMsgBox";
+import ChannelChat from "../components/channel/ChannelChat";
 
 const Channel = () => {
   return (
     <>
-      <h1>Channel!</h1>
-      <p>사이드바에서 채널을 클릭했을때, 해당 아이디의 채널을 뿌려줍니다</p>
+      <ChannelsWrap>
+        <ChannelHeader />
+        <ChannelChat />
+        <ChannelMsgBox />
+      </ChannelsWrap>
     </>
   );
 };
+
+const ChannelsWrap = styled.div`
+  width: 100%;
+  height: calc(100vh - 38px);
+  display: flex;
+  flex-direction: column;
+`;
+
 export default Channel;

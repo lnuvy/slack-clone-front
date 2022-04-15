@@ -33,6 +33,9 @@ const TagInput = styled.input`
     outline: none;
     box-shadow: 0 0 0 1px #1264a3, 0 0 0 5px rgba(29, 155, 209, 0.3);
   }
+  text-align: ${({ text_align }) => (text_align ? `${text_align};` : "false")};
+  background-color: ${({ bg }) => (bg ? `${bg};` : "false")};
+  // opacity: ${({ opacity }) => (opacity ? `${opacity};` : "false")};
 `;
 
 export default Input;

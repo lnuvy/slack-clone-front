@@ -2,21 +2,33 @@ import React from "react";
 import { IoTimeOutline } from "react-icons/io5";
 
 import styled from "styled-components";
+import { Input, Image } from "../elements";
 
 const NavigationBar = () => {
   return (
     <>
-      <NavigationBarWarp>
-        <IoTimeOutline style={{ fontSize: "20px" }} />
-        <input placeholder="Slack 검색" />
-        <button>프로필 이미지 버튼</button>
-      </NavigationBarWarp>
+      <div>
+        <NavigationBarWarp>
+          <IoTimeOutline style={{ fontSize: "20px" }} />
+          <Input
+            placeholder="Slack 검색"
+            width="584px"
+            height="26px"
+            margin="20px"
+            text_align="center"
+            opacity="0.2"
+            color="white"
+            bg="rgb(207,195,207)"
+          />
+          <Image shape="ProfileImg" size="26" />
+        </NavigationBarWarp>
+      </div>
     </>
   );
 };
 
 const NavigationBarWarp = styled.header`
-  height: 38px;
+  height: 44px;
   background: #350d36;
   color: #ffffff;
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -25,14 +37,7 @@ const NavigationBarWarp = styled.header`
   justify-content: center;
   position: relative;
   z-index: 203;
-`;
-
-const ProfileImg = styled.img`
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  top: 5px;
-  right: 16px;
+  text-align: center;
 `;
 
 const ProfileModal = styled.div`

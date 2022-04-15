@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { history } from "../redux/configureStore";
+import { history } from "../../redux/configureStore";
 
-import { Image } from "../elements/index";
+import { Image } from "../../elements/index";
 
 const MassageList = () => {
   return (
@@ -14,7 +14,7 @@ const MassageList = () => {
         </GridMenu>
         <UserWarp
           onClick={() => {
-            history.replace("/dm");
+            history.replace("/main/dm");
           }}
         >
           <Image shape="ProfileImg" size="20" />

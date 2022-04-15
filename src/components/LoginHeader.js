@@ -10,7 +10,7 @@ const LoginHeader = (props) => {
     <Header>
       <div></div>
       <div>
-        <Link to="/login">
+        <Link to="/user/login">
           <img alt="Slack" src={slackLogo} height="34px" />
         </Link>
       </div>
@@ -18,7 +18,7 @@ const LoginHeader = (props) => {
         <SignupDiv className="flex-column">
           <div className="res-none">
             <p>Slack을 처음 이용하시나요?</p>
-            <Link to="/signup">
+            <Link to="/user/signup">
               <p style={{ fontWeight: "600", textAlign: "end" }}>계정 생성</p>
             </Link>
           </div>
