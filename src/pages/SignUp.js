@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import LoginHeader from "../components/LoginHeader";
+import LoginHeader from "../components/login/LoginHeader";
 import { Button, Input, Text } from "../elements";
 
 const SignUp = () => {

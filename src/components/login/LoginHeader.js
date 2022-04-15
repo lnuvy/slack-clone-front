@@ -1,5 +1,5 @@
 import React from "react";
-import slackLogo from "../shared/images/slackLogo.png";
+import slackLogo from "../../shared/images/slackLogo.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 

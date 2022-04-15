@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import LoginFooter from "../components/LoginFooter";
-import LoginHeader from "../components/LoginHeader";
+import LoginHeader from "../components/login/LoginHeader";
+import LoginFooter from "../components/login/LoginFooter";
 import { Button, Input, Text } from "../elements";
 import { userActions } from "../redux/modules/user";
 
