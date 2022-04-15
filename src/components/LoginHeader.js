@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const LoginHeader = (props) => {
+  const { signUpNow } = props;
+
   return (
     <Header>
       <div></div>
@@ -12,14 +14,21 @@ const LoginHeader = (props) => {
           <img alt="Slack" src={slackLogo} height="34px" />
         </Link>
       </div>
-      <SignupDiv className="flex-column">
-        <p>Slack을 처음 이용하시나요?</p>
-        <Link to="/signup">계정 생성</Link>
-      </SignupDiv>
+      {signUpNow ? null : (
+        <SignupDiv className="flex-column">
+          <div className="res-none">
+            <p>Slack을 처음 이용하시나요?</p>
+            <Link to="/signup">
+              <p style={{ fontWeight: "600", textAlign: "end" }}>계정 생성</p>
+            </Link>
+          </div>
+        </SignupDiv>
+      )}
     </Header>
   );
 };
 
+// 슬랙 공식 CSS 를 그대로 따라했습니다
 const Header = styled.div`
   padding: 48px 0 40px;
   width: 100%;
@@ -31,6 +40,7 @@ const Header = styled.div`
 const SignupDiv = styled.div`
   align-items: flex-end;
   padding-right: 40px;
+  font-size: 13px;
 `;
 
 export default LoginHeader;
