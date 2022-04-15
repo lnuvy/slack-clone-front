@@ -1,6 +1,6 @@
 import Main from "./Main";
 import Login from "./Login";
-import SignUp from "./Signup";
+import SignUp from "./SignUp";
 import Channel from "./Channel";
 import MessagePage from "./MessagePage";
 
