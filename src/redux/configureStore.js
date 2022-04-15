@@ -12,7 +12,7 @@ export const history = createBrowserHistory();
 
 // 리듀서 router 안에 history 넣기
 const rootReducer = combineReducers({
-  // user: User,
+  user: User,
   // content: Content,
   // image: Image,
   // comment: Comment,

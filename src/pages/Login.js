@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import LoginFooter from "../components/LoginFooter";
 import LoginHeader from "../components/LoginHeader";
 import { Button, Input, Text } from "../elements";
+import { userActions } from "../redux/modules/user";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [inputs, setInputs] = useState({});
 
   const handleChange = (e) => {
@@ -19,7 +23,7 @@ const Login = () => {
     }
 
     console.log(inputs);
-    // dispatch
+    dispatch(userActions.loginDB(inputs));
   };
 
   return (
@@ -34,7 +38,9 @@ const Login = () => {
           </Text>
         </InfoDiv>
         <InnerWrap className="flex-column">
-          <Button borderColor="#4285f4">구글 계정으로 로그인</Button>
+          <Button borderColor="#4285f4" color="#4285f4">
+            구글 계정으로 로그인
+          </Button>
           <Button borderColor="#1d1c1d" margin="16px">
             깃허브 계정으로 로그인
           </Button>
@@ -64,6 +70,7 @@ const Login = () => {
           <Button onClick={handleSubmit}>이메일로 로그인</Button>
         </InnerWrap>
       </LoginWrap>
+      <LoginFooter />
     </>
   );
 };

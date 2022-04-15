@@ -1,5 +1,5 @@
 const getToken = () => {
-  localStorage.getItem("token");
+  return localStorage.getItem("token");
 };
 
 const insertToken = (token) => {
