@@ -14,7 +14,7 @@ const MassageList = () => {
         </GridMenu>
         <UserWarp
           onClick={() => {
-            history.replace("/dm");
+            history.replace("/main/dm");
           }}
         >
           <Image shape="ProfileImg" size="20" />

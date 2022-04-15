@@ -12,7 +12,7 @@ const SignUp = () => {
     setInputs((values) => ({ ...values, [id]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     // 프론트 유효성검사 더 강화해야함
     if (!inputs.email || !inputs.password || !inputs.nickname) {
       alert("빈값이 있네요~");

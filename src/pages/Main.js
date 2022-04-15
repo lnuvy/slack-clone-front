@@ -8,6 +8,7 @@ import ChannelList from "../components/ChannelList";
 import MassageList from "../components/MassageList";
 import Channel from "./Channel";
 import MessagePage from "./MessagePage";
+import { BrowserRouter } from "react-router-dom";
 
 // 처음 로그인 했을때, 주된 컨텐츠가 되는 부분 (슬랙에서 Slack Connect 부분)
 const Main = () => {
@@ -24,8 +25,8 @@ const Main = () => {
         </ChannelsWrap>
         <ChatsWrap>
           <Switch>
-            <Route path="/channel" component={Channel} />
-            <Route path="/dm" component={MessagePage} />
+            <Route path="/main/channel" exact component={Channel} />
+            <Route path="/main/dm" exact component={MessagePage} />
           </Switch>
         </ChatsWrap>
       </MainWrap>

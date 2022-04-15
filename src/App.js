@@ -11,9 +11,9 @@ function App() {
     <div className="App">
       <ConnectedRouter history={history}>
         <Switch>
-          <Route path="/" component={Main} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/signup" exact component={SignUp} />
+          <Route path="/main" exact component={Main} />
+          <Route path="/user/login" exact component={Login} />
+          <Route path="/user/signup" exact component={SignUp} />
           {/* <Route path="/channel/:id" component={Channel} />
           <Route path="/dm" component={MessagePage} /> */}
         </Switch>

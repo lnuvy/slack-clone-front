@@ -15,7 +15,7 @@ const ChannelList = () => {
 
         <UserWarp
           onClick={() => {
-            history.replace("/channel");
+            history.push("/main/channel");
           }}
         >
           <span style={{ margin: "4px" }}># 홍길동</span>
